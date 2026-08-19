@@ -11,7 +11,6 @@ export default function ContactPage() {
       <main>
         <section className="contact-page">
           <div className="container contact-simple">
-
             <div className="contact-cards">
 
               {/* LINKEDIN */}
@@ -46,7 +45,7 @@ export default function ContactPage() {
 
               {/* EMAIL */}
               <a
-                href="mailto:autopilotsolutions@gmail.com"
+                href="mailto:contact.autopilotsolutions@gmail.com"
                 className="contact-card contact-card-email"
               >
                 <div className="contact-card-icon">
@@ -59,7 +58,7 @@ export default function ContactPage() {
                   </span>
 
                   <h2>
-                    autopilotsolutions@gmail.com
+                    contact.autopilotsolutions@gmail.com
                   </h2>
 
                   <p>
