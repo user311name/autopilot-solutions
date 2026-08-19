@@ -14,96 +14,128 @@ export default function QuiSommesNousPage() {
     <>
       <Header />
 
-      <main>
-        <section className="page-hero">
+      <main className="about-page">
+        {/* HERO */}
+        <section className="about-hero">
           <div className="container">
-            <span className="section-label">01 / QUI SOMMES-NOUS</span>
+            <div className="about-hero-grid">
+              <div className="about-hero-label">
+                <span className="section-label">01 / QUI SOMMES-NOUS</span>
 
-            <h1>
-              Une approche humaine de
-              <em> l'automatisation.</em>
-            </h1>
+                <span className="about-vertical-line" />
+              </div>
 
-            <p>
-              AutoPilot Solutions accompagne les indépendants, artisans et
-              petites entreprises dans l'automatisation de leurs tâches
-              numériques répétitives.
-            </p>
+              <div className="about-hero-content">
+                <span className="about-eyebrow">
+                  AUTOMATISATION & EFFICACITÉ
+                </span>
+
+                <h1>
+                  Une approche humaine de
+                  <span> l'automatisation.</span>
+                </h1>
+
+                <p>
+                  AutoPilot Solutions accompagne les indépendants, artisans et
+                  petites entreprises dans l'automatisation de leurs tâches
+                  numériques répétitives.
+                </p>
+
+                <div className="about-hero-meta">
+                  <span>01</span>
+                  <span className="about-meta-line" />
+                  <span>AUTOPILOT SOLUTIONS</span>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <div className="about-orb about-orb-one" />
+          <div className="about-orb about-orb-two" />
         </section>
 
-        <section className="content-section">
-          <div className="container content-grid">
-            <div>
+        {/* APPROCHE */}
+        <section className="about-approach">
+          <div className="container">
+            <div className="about-section-heading">
               <span className="section-label">NOTRE APPROCHE</span>
+
+              <span className="about-heading-number">01</span>
             </div>
 
-            <div className="content-main">
-              <h2>
-                Simplifier la technique pour
-                <em> gagner du temps.</em>
-              </h2>
+            <div className="about-feature">
+              <div className="about-feature-side">
+                <span className="about-feature-tag">
+                  SIMPLE
+                </span>
 
-              <p>
-                AutoPilot Solutions est une activité d'automatisation de
-                tâches numériques destinée aux indépendants, artisans et
-                petites entreprises.
-              </p>
+                <span className="about-feature-line" />
 
-              <p>
-                L'objectif est simple : permettre à des professionnels qui
-                n'ont ni le temps ni l'équipe technique nécessaire
-                d'automatiser certaines tâches répétitives de leur activité.
-              </p>
+                <span className="about-feature-tag">
+                  ACCESSIBLE
+                </span>
+              </div>
 
-              <p>
-                L'approche privilégie des solutions simples et accessibles,
-                sans jargon technique inutile.
-              </p>
-            </div>
-          </div>
-        </section>
+              <div className="about-feature-main">
+                <h2>
+                  Simplifier la technique pour
+                  <span> gagner du temps.</span>
+                </h2>
 
-        <section className="dark-section">
-          <div className="container content-grid">
-            <div>
-              <span className="section-label light">NICOLAS</span>
-            </div>
+                <div className="about-copy">
+                  <p>
+                    AutoPilot Solutions est une activité d'automatisation de
+                    tâches numériques destinée aux indépendants, artisans et
+                    petites entreprises.
+                  </p>
 
-            <div className="content-main light-content">
-              <h2>
-                Une expérience professionnelle
-                <em> tournée vers le concret.</em>
-              </h2>
+                  <p>
+                    L'objectif est simple : permettre à des professionnels qui
+                    n'ont ni le temps ni l'équipe technique nécessaire
+                    d'automatiser certaines tâches répétitives de leur
+                    activité.
+                  </p>
 
-              <p>
-                Le parcours de Nicolas comprend la gestion de contrats en
-                assurance, des missions administratives ainsi que de la
-                relation client.
-              </p>
+                  <p>
+                    L'approche privilégie des solutions simples et
+                    accessibles, sans jargon technique inutile.
+                  </p>
+                </div>
+              </div>
 
-              <p>
-                Ces expériences permettent de comprendre les besoins
-                quotidiens des professionnels et d'identifier les tâches
-                répétitives qui peuvent être simplifiées grâce à
-                l'automatisation.
-              </p>
+              <div className="about-feature-mark" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </div>
             </div>
           </div>
         </section>
 
-        <section className="cta-section">
+        {/* CTA */}
+        <section className="about-cta">
           <div className="container">
-            <span className="section-label">AUTOPILOT SOLUTIONS</span>
+            <div className="about-cta-card">
+              <div className="about-cta-top">
+                <span className="section-label">AUTOPILOT SOLUTIONS</span>
 
-            <h2>
-              Une tâche répétitive vous fait perdre
-              <em> du temps ?</em>
-            </h2>
+                <span className="about-cta-status">
+                  DISPONIBLE POUR VOTRE PROJET
+                </span>
+              </div>
 
-            <Link href="/contact" className="button button-amber">
-              Demander un devis gratuit <span>→</span>
-            </Link>
+              <div className="about-cta-content">
+                <h2>
+                  Une tâche répétitive vous fait perdre
+                  <span> du temps ?</span>
+                </h2>
+
+                <Link href="/contact" className="button button-amber">
+                  Demander un devis gratuit
+                  <span>→</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
       </main>

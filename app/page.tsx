@@ -21,10 +21,26 @@ const services = [
 ];
 
 const steps = [
-  ["01", "Vous expliquez", "Vous nous décrivez simplement la tâche qui vous fait perdre du temps."],
-  ["02", "Nous analysons", "Nous identifions ce qui peut être automatisé et les outils concernés."],
-  ["03", "Nous mettons en place", "Nous construisons une automatisation adaptée à votre fonctionnement."],
-  ["04", "Vous gagnez du temps", "Votre automatisation fonctionne en arrière-plan au quotidien."],
+  [
+    "01",
+    "Vous expliquez",
+    "Vous nous décrivez simplement la tâche qui vous fait perdre du temps.",
+  ],
+  [
+    "02",
+    "Nous analysons",
+    "Nous identifions ce qui peut être automatisé et les outils concernés.",
+  ],
+  [
+    "03",
+    "Nous mettons en place",
+    "Nous construisons une automatisation adaptée à votre fonctionnement.",
+  ],
+  [
+    "04",
+    "Vous gagnez du temps",
+    "Votre automatisation fonctionne en arrière-plan au quotidien.",
+  ],
 ];
 
 const prices = [
@@ -47,7 +63,8 @@ const prices = [
     number: "03",
     name: "Sur-mesure",
     price: "Sur devis",
-    description: "Pour des besoins spécifiques et une architecture personnalisée.",
+    description:
+      "Pour des besoins spécifiques et une architecture personnalisée.",
     features: ["Automatisations illimitées", "Architecture personnalisée"],
   },
 ];
@@ -58,6 +75,7 @@ export default function Home() {
       <Header />
 
       <main>
+        {/* HERO */}
         <section className="hero">
           <div className="container hero-layout">
             <div className="hero-copy">
@@ -101,6 +119,7 @@ export default function Home() {
               <div className="graphic-flow">
                 <div className="flow-item">
                   <div className="flow-dot">1</div>
+
                   <div>
                     <strong>Déclencheur</strong>
                     <small>Une action se produit</small>
@@ -111,6 +130,7 @@ export default function Home() {
 
                 <div className="flow-item">
                   <div className="flow-dot blue">2</div>
+
                   <div>
                     <strong>Automatisation</strong>
                     <small>Le processus s'exécute</small>
@@ -121,6 +141,7 @@ export default function Home() {
 
                 <div className="flow-item">
                   <div className="flow-dot amber">3</div>
+
                   <div>
                     <strong>Résultat</strong>
                     <small>La tâche est terminée</small>
@@ -136,19 +157,26 @@ export default function Home() {
           </div>
         </section>
 
+        {/* INTRO */}
         <section className="intro-strip">
           <div className="container intro-strip-inner">
             <span className="mono">MOINS DE TÂCHES RÉPÉTITIVES.</span>
+
             <span className="strip-line" />
-            <span className="mono">PLUS DE TEMPS POUR VOTRE ACTIVITÉ.</span>
+
+            <span className="mono">
+              PLUS DE TEMPS POUR VOTRE ACTIVITÉ.
+            </span>
           </div>
         </section>
 
+        {/* SERVICES */}
         <section className="services" id="services">
           <div className="container">
             <div className="section-intro">
               <div>
                 <span className="section-label">01 / SERVICES</span>
+
                 <h2>
                   Ce qui peut être automatisé
                   <em> peut vous faire gagner du temps.</em>
@@ -163,8 +191,13 @@ export default function Home() {
 
             <div className="service-grid">
               {services.map((service) => (
-                <article className="service-card" key={service.number}>
-                  <span className="card-number">{service.number}</span>
+                <article
+                  className="service-card"
+                  key={service.number}
+                >
+                  <span className="card-number">
+                    {service.number}
+                  </span>
 
                   <div className="service-symbol">
                     {service.number === "01" && "✉"}
@@ -173,6 +206,7 @@ export default function Home() {
                   </div>
 
                   <h3>{service.title}</h3>
+
                   <p>{service.text}</p>
 
                   <span className="card-arrow">↗</span>
@@ -182,11 +216,15 @@ export default function Home() {
           </div>
         </section>
 
+        {/* PROCESS */}
         <section className="process">
           <div className="container">
             <div className="section-intro">
               <div>
-                <span className="section-label">02 / COMMENT ÇA MARCHE</span>
+                <span className="section-label">
+                  02 / COMMENT ÇA MARCHE
+                </span>
+
                 <h2>
                   Pas besoin d'être
                   <em> technicien.</em>
@@ -194,8 +232,8 @@ export default function Home() {
               </div>
 
               <p>
-                Vous nous expliquez votre besoin. Nous nous occupons de la
-                partie technique.
+                Vous nous expliquez votre besoin. Nous nous occupons de
+                la partie technique.
               </p>
             </div>
 
@@ -203,8 +241,11 @@ export default function Home() {
               {steps.map(([number, title, text]) => (
                 <article className="step" key={number}>
                   <span className="step-number">{number}</span>
+
                   <div className="step-line" />
+
                   <h3>{title}</h3>
+
                   <p>{text}</p>
                 </article>
               ))}
@@ -212,11 +253,13 @@ export default function Home() {
           </div>
         </section>
 
+        {/* PRICING */}
         <section className="pricing">
           <div className="container">
             <div className="section-intro">
               <div>
                 <span className="section-label">03 / TARIFS</span>
+
                 <h2>
                   Des formules
                   <em> simples.</em>
@@ -231,14 +274,19 @@ export default function Home() {
             <div className="price-grid">
               {prices.map((price) => (
                 <article
-                  className={`price-card ${price.featured ? "featured" : ""}`}
+                  className={`price-card ${
+                    price.featured ? "featured" : ""
+                  }`}
                   key={price.number}
                 >
                   {price.featured && (
                     <span className="popular">RECOMMANDÉ</span>
                   )}
 
-                  <span className="price-number">{price.number}</span>
+                  <span className="price-number">
+                    {price.number}
+                  </span>
+
                   <h3>{price.name}</h3>
 
                   <div className="price">
@@ -263,7 +311,10 @@ export default function Home() {
                     ))}
                   </ul>
 
-                  <Link href="/contact" className="price-button">
+                  <Link
+                    href="/contact"
+                    className="price-button"
+                  >
                     Demander un devis
                   </Link>
                 </article>
@@ -272,12 +323,18 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ABOUT */}
         <section className="about-preview">
           <div className="container about-layout">
             <div>
-              <span className="section-label">04 / QUI SOMMES-NOUS</span>
+              <span className="section-label">
+                04 / QUI SOMMES-NOUS
+              </span>
 
-              <div className="about-diagram" aria-hidden="true">
+              <div
+                className="about-diagram"
+                aria-hidden="true"
+              >
                 <span />
                 <span />
                 <span />
@@ -293,25 +350,30 @@ export default function Home() {
               </h2>
 
               <p>
-                AutoPilot Solutions accompagne les indépendants, artisans et
-                petites entreprises qui souhaitent gagner du temps sans
-                devoir gérer eux-mêmes la complexité technique.
+                AutoPilot Solutions accompagne les indépendants,
+                artisans et petites entreprises qui souhaitent gagner du
+                temps sans devoir gérer eux-mêmes la complexité
+                technique.
               </p>
 
               <p>
-                Basée à Muret, l'activité démarre dans le bassin toulousain
-                avec une approche simple : comprendre votre quotidien,
-                identifier les tâches répétitives et construire une solution
-                réellement utile.
+                Basée à Muret, l'activité démarre dans le bassin
+                toulousain avec une approche simple : comprendre votre
+                quotidien, identifier les tâches répétitives et
+                construire une solution réellement utile.
               </p>
 
-              <Link href="/qui-sommes-nous" className="text-link">
+              <Link
+                href="/qui-sommes-nous"
+                className="text-link"
+              >
                 Découvrir AutoPilot Solutions →
               </Link>
             </div>
           </div>
         </section>
 
+        {/* CTA */}
         <section className="final-cta">
           <div className="container final-cta-inner">
             <span className="section-label">UN BESOIN ?</span>

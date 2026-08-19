@@ -21,7 +21,8 @@ const offers = [
     number: "02",
     name: "Avancé",
     price: "400 €",
-    description: "Pour plusieurs automatisations et un accompagnement.",
+    description:
+      "Pour plusieurs automatisations et un accompagnement.",
     features: [
       "Jusqu'à 4 automatisations",
       "1 mois de support",
@@ -46,8 +47,11 @@ export default function TarifsPage() {
     <>
       <Header />
 
-      <main>
-        <section className="page-hero">
+      <main className="pricing-page">
+        {/* HERO */}
+        <section className="page-hero pricing-hero">
+          <div className="pricing-hero-grid" aria-hidden="true" />
+
           <div className="container">
             <span className="section-label">02 / TARIFS</span>
 
@@ -57,68 +61,126 @@ export default function TarifsPage() {
             </h1>
 
             <p>
-              Des solutions d'automatisation adaptées à différents niveaux de
-              besoin.
+              Des solutions d'automatisation adaptées à différents
+              niveaux de besoin.
             </p>
+
+            <div className="pricing-hero-line" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </div>
           </div>
         </section>
 
+        {/* OFFRES */}
         <section className="pricing-page-section">
           <div className="container">
+            <div className="pricing-intro-row">
+              <div>
+                <span className="section-label">
+                  NOS FORMULES
+                </span>
+              </div>
+
+              <p>
+                Chaque formule est pensée pour répondre à un besoin
+                concret, sans complexité inutile.
+              </p>
+            </div>
+
             <div className="full-price-grid">
               {offers.map((offer) => (
                 <article
                   key={offer.number}
-                  className={`full-price-card ${
+                  className={`full-price-card pricing-card-polished ${
                     offer.featured ? "featured" : ""
                   }`}
                 >
+                  <div className="pricing-card-glow" />
+
                   {offer.featured && (
-                    <span className="popular">RECOMMANDÉ</span>
+                    <span className="popular">
+                      RECOMMANDÉ
+                    </span>
                   )}
 
-                  <span className="price-number">{offer.number}</span>
+                  <div className="pricing-card-top">
+                    <span className="price-number">
+                      {offer.number}
+                    </span>
 
-                  <h2>{offer.name}</h2>
-
-                  <div className="full-price">
-                    {offer.name !== "Sur-mesure" && (
-                      <small>À partir de</small>
-                    )}
-                    <strong>{offer.price}</strong>
+                    <span className="pricing-card-index">
+                      AUTOMATISATION
+                    </span>
                   </div>
 
-                  <p>{offer.description}</p>
+                  <div className="pricing-card-content">
+                    <h2>{offer.name}</h2>
 
-                  <ul>
-                    {offer.features.map((feature) => (
-                      <li key={feature}>
-                        <span>✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                    <div className="full-price">
+                      {offer.name !== "Sur-mesure" && (
+                        <small>À partir de</small>
+                      )}
 
-                  <Link href="/contact" className="price-button">
+                      <strong>{offer.price}</strong>
+                    </div>
+
+                    <p>{offer.description}</p>
+
+                    <div className="pricing-divider" />
+
+                    <ul>
+                      {offer.features.map((feature) => (
+                        <li key={feature}>
+                          <span className="feature-check">
+                            ✓
+                          </span>
+
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <Link
+                    href="/contact"
+                    className="price-button pricing-card-button"
+                  >
                     Demander un devis
+                    <span>↗</span>
                   </Link>
+
+                  <div className="pricing-card-decoration">
+                    <span />
+                    <span />
+                  </div>
                 </article>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="cta-section">
+        {/* CTA */}
+        <section className="cta-section pricing-final-cta">
+          <div className="pricing-cta-grid" aria-hidden="true" />
+
           <div className="container">
-            <span className="section-label">BESOIN SPÉCIFIQUE</span>
+            <span className="section-label">
+              BESOIN SPÉCIFIQUE
+            </span>
 
             <h2>
               Votre besoin ne rentre pas dans une formule
               <em> standard ?</em>
             </h2>
 
-            <Link href="/contact" className="button button-amber">
-              Demander un devis gratuit <span>→</span>
+            <Link
+              href="/contact"
+              className="button button-amber"
+            >
+              Demander un devis gratuit
+              <span>→</span>
             </Link>
           </div>
         </section>
